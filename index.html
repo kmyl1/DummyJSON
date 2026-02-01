@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="contenedor-navegacion">
+            <h1>CATALOGO</h1>
+            <div class="contenedor-busqueda">
+                <input type="text" id="input-busqueda" placeholder="Buscar producto por nombre/categoria">
+            </div>
+        </nav>
+    </header>
+
+    <main id="aplicacion">
+        <section id="vista-inventario">
+            <div id="grid-productos" class="grid"></div>
+        </section>
+
+        <section id="vista-detalle" class="oculto">
+            <div class="contenedor-boton">
+                <button id="boton-volver"><- Volver</button>
+            </div>
+            <div id="contenido-detalle" class="detalle-card"></div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
