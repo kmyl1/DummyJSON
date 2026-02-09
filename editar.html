@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="display: flex; align-items: center; min-height: 100vh;">
+    <main class="form-contenedor" style="margin: auto; width: 100%; max-width: 500px; background: var(--color-tarjeta); padding: 30px; border-radius: 12px;">
+        <h2 style="color: var(--color-primario); margin-top: 0;">Editar producto</h2>
+        <p id="cargando-msg" style="color: var(--color-texto-secundario);">Obteniendo informacion del producto... </p>
+        
+        <form id="form-editar" class="oculto">
+            <div class="campo-form" style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px;">Nombre</label>
+                <input type="text" id="edit-titulo" required style="width: 100%; box-sizing: border-box;">
+            </div>
+            
+            <div class="campo-form" style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px;">Precio</label>
+                <input type="number" id="edit-precio" step="0.01" required style="width: 100%; box-sizing: border-box;">
+            </div>
+            
+            <div class="campo-form" style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px;">Descripcion</label>
+                <textarea id="edit-desc" rows="4" required style="width: 100%; box-sizing: border-box;"></textarea>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button type="button" class="btn-admin" onclick="window.location.href='index.html'" style="flex: 1;">Cancelar</button>
+                <button type="submit" class="btn-crear-principal" style="flex: 2;">Actualizar</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="editar.js"></script>
+</body>
+</html>

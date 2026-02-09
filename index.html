@@ -3,33 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo de productos</title>
+    <title>Catalogo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <nav class="contenedor-navegacion">
-            <h1>CATALOGO</h1>
-            <div class="contenedor-busqueda">
-                <input type="text" id="input-busqueda" placeholder="Buscar producto por nombre/categoria">
+        <nav class="contenedor-navegacion">   
+            <h1><span>Catalogo</span></h1>       
+            <div class="controles-admin">
+                <div class="contenedor-busqueda">
+                    <input type="text" id="input-busqueda" placeholder="Buscar por nombre, marca o categoria...">
+                </div>
+                
+                <select id="select-categoria">
+                    <option value="">Todas las categorias</option>
+                </select>
+
+                <button class="btn-crear-principal" onclick="window.location.href='crear.html'">
+                    +Nuevo Producto
+                </button>
+
+                <select id="select-orden">
+                    <option value="">Ordenar por...</option>
+                    <option value="title-asc">Nombre (a-z)</option>
+                    <option value="title-desc">Nombre (z-a)</option>
+                    <option value="price-asc">Precio (Menor a mayor)</option>
+                    <option value="price-desc">Precio (Mayor a menor)</option>
+                </select>
             </div>
         </nav>
     </header>
-
     <main id="aplicacion">
         <section id="vista-inventario">
-            <div id="grid-productos" class="grid"></div>
+            <div id="grid-productos" class="grid">
+                </div>
+            <div class="paginacion">
+                <button id="btn-prev" class="btn-pag">Anterior</button>
+                <span id="info-paginacion">Pagina 1</span>
+                <button id="btn-next" class="btn-pag">Siguiente</button>
+            </div>
         </section>
-
         <section id="vista-detalle" class="oculto">
+            
             <div class="contenedor-boton">
-                <button id="boton-volver"><- Volver</button>
+                <button id="boton-volver" class="btn-volver">← Volver</button>
             </div>
             <div id="contenido-detalle" class="detalle-card"></div>
         </section>
     </main>
-
     <script src="main.js"></script>
 </body>
 </html>
